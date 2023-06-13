@@ -18,7 +18,7 @@ jobs:
       
   publish:
     runs-on: ubuntu-latest
-    
+    needs: build
     steps:
       - uses: actions/checkout@v3
       - name: Login to GitHub Container Registry
@@ -27,6 +27,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the hello-docker Docker image
+      - name: Publish Docker image
         run: |
            docker push ghcr.io/stromedos/strapi_educatio:latest
