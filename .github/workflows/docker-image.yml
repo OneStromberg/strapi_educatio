@@ -24,6 +24,7 @@ jobs:
         docker push ghcr.io/onestromberg/strapi_educatio:latest
   deploy:
     runs-on: ubuntu-latest
+    needs: [build-publish]
     steps:
       - uses: appleboy/ssh-action@master
         with:
