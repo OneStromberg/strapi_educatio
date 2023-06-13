@@ -22,7 +22,6 @@ jobs:
       run: |
         docker build . --tag ghcr.io/onestromberg/strapi_educatio:latest
         docker push ghcr.io/onestromberg/strapi_educatio:latest
-    - name: executing remote ssh commands using password
   deploy:
     runs-on: ubuntu-latest
     steps:
