@@ -23,10 +23,13 @@ jobs:
         docker build . --tag ghcr.io/onestromberg/strapi_educatio:latest
         docker push ghcr.io/onestromberg/strapi_educatio:latest
     - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY_GITACTIONS }}
-        script: |
-            bash ~/bootstrap.sh
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY_GITACTIONS }}
+          script: |
+              bash ~/bootstrap.sh
