@@ -20,5 +20,5 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the hello-docker Docker image
       run: |
-        docker build . --tag ghcr.io/stromedos/strapi_educatio:latest
-        docker push ghcr.io/stromedos/strapi_educatio:latest
+        docker build . --tag ghcr.io/onestromberg/strapi_educatio:latest
+        docker push ghcr.io/onestromberg/strapi_educatio:latest
