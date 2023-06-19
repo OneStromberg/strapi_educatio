@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "callback-requests",
+  "info": {
+    "singularName": "callback-request",
+    "pluralName": "callback-requests",
+    "displayName": "Callback-request"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  }
+}
