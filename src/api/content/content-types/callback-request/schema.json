@@ -4,15 +4,24 @@
   "info": {
     "singularName": "callback-request",
     "pluralName": "callback-requests",
-    "displayName": "Callback-request"
+    "displayName": "Callback Request"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "text": {
-      "type": "richtext"
+    "name": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
     }
   }
 }
