@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "achiwments",
+  "info": {
+    "singularName": "achiwment",
+    "pluralName": "achiwments",
+    "displayName": "Achiwment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "EnglishTitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "EnglishText": {
+      "type": "richtext"
+    }
+  }
+}

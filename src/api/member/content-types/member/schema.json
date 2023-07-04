@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "blog-post",
+  "collectionName": "members",
   "info": {
-    "singularName": "blog-post",
-    "pluralName": "blog-posts",
-    "displayName": "Blog Post",
-    "description": ""
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Member"
   },
   "options": {
     "draftAndPublish": true
@@ -15,13 +14,13 @@
     "title": {
       "type": "string"
     },
-    "text": {
-      "type": "richtext"
-    },
     "EnglishTitle": {
       "type": "string"
     },
-    "EnglishText": {
+    "description": {
+      "type": "richtext"
+    },
+    "EnglishDescription": {
       "type": "richtext"
     }
   }

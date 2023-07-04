@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "register_ons",
+  "info": {
+    "singularName": "register-on",
+    "pluralName": "register-ons",
+    "displayName": "Register On"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "EnglishText": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "string"
+    },
+    "ButtonText": {
+      "type": "string"
+    }
+  }
+}
