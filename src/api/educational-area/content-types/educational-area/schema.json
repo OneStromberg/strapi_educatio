@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educational_areas",
+  "info": {
+    "singularName": "educational-area",
+    "pluralName": "educational-areas",
+    "displayName": "Educational Area",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "EnglishTitle": {
+      "type": "string"
+    },
+    "EnglishText": {
+      "type": "richtext"
+    }
+  }
+}
