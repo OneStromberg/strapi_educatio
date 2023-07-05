@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * achiwment service
+ * achiewment service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::achiwment.achiwment');
+module.exports = createCoreService('api::achiewment.achiewment');

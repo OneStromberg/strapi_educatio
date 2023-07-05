@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * achiwment router
+ * achiewment router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::achiwment.achiwment');
+module.exports = createCoreRouter('api::achiewment.achiewment');

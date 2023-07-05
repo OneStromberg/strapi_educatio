@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "achiwments",
+  "collectionName": "achiewments",
   "info": {
-    "singularName": "achiwment",
-    "pluralName": "achiwments",
-    "displayName": "Achiwment"
+    "singularName": "achiewment",
+    "pluralName": "achiewments",
+    "displayName": "Achiewment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,13 @@
     },
     "EnglishText": {
       "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

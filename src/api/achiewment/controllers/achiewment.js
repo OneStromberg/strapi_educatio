@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * achiwment controller
+ * achiewment controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::achiwment.achiwment');
+module.exports = createCoreController('api::achiewment.achiewment');

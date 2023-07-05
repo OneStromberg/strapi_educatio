@@ -4,7 +4,8 @@
   "info": {
     "singularName": "register-on",
     "pluralName": "register-ons",
-    "displayName": "Register On"
+    "displayName": "Register On",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,6 +22,9 @@
       "type": "string"
     },
     "ButtonText": {
+      "type": "string"
+    },
+    "EnglishButtonText": {
       "type": "string"
     }
   }
