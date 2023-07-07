@@ -16,6 +16,9 @@
     },
     "ReviewText": {
       "type": "richtext"
+    },
+    "rating": {
+      "type": "string"
     }
   }
 }
