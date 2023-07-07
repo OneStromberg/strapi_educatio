@@ -35,9 +35,12 @@ async function scrapeAndSaveReviews() {
         await browser.close();
 
         const apiUrl = process.env.HOST;
-        const user = await strapi.plugins['users-permissions'].services.user.fetch({ username: 'eddos' });
+        const user = await strapi
+            .plugins['users-permissions']
+            .services.user.fetch({ username: 'alex' });
+
         const apiKey = user?.apikey?.key;
-        // const apiKey = ''
+        // const apiKey = '' //заглушка
         for (const reviewData of reviews) {
             await axios.post(
                 `http://${apiUrl}:1337/api/reviews`,
@@ -67,4 +70,4 @@ cron.schedule('0 0 * * 1', async () => {
     await scrapeAndSaveReviews();
 });
 
-// scrapeAndSaveReviews();
+// scrapeAndSaveReviews(); //для запуска при тестах
