@@ -1,5 +1,4 @@
 'use strict';
-const puppeteer = require('puppeteer');
 
 module.exports = {
   /**
@@ -8,23 +7,7 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register({ strapi }) {
-    // Вызов функции scrapeAndSaveReviews
-    strapi.log.info('Calling scrapeAndSaveReviews');
-
-    // Вставьте содержимое функции scrapeAndSaveReviews здесь
-    async function scrapeAndSaveReviews() {
-      try {
-        const browser = await puppeteer.launch({ headless: "new" });
-        // Остальной код функции...
-      } catch (error) {
-        console.error('An error occurred while scraping and saving reviews:', error);
-      }
-    }
-
-    // Вызов функции
-    scrapeAndSaveReviews();
-  },
+  register({ strapi }) { },
 
   /**
    * An asynchronous bootstrap function that runs before
