@@ -5,10 +5,10 @@ const axios = require('axios').default;
 
 async function scrapeAndSaveReviews() {
   try {
-    console.log('Функция scrapeReviews выполняется автоматически.');
-    const browser = await puppeteer.launch({ headless: true });
     const apiUrl = process.env.API_HOST;
     const apiKey = process.env.API_TOKEN;
+    console.log('Функция scrapeReviews выполняется автоматически.');
+    const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
 
     await page.goto('https://www.google.com/maps/place/%D0%A6%D0%95+-+%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B8+%D0%95%D0%B4%D1%83%D0%BA%D0%B0%D1%86%D1%96%D1%97/@49.832689,24.0122356,12z/data=!4m8!3m7!1s0x473add32088aee89:0xac4ea9a7960ede46!8m2!3d49.832689!4d24.0122356!9m1!1b1!16s%2Fg%2F11r7w1cp8_?entry=ttu');
@@ -25,41 +25,17 @@ async function scrapeAndSaveReviews() {
             clearInterval(scrollInterval);
             resolve();
           }
-        }, 1500);
+        }, 2000);
       });
     });
 
+
     // await page.waitForTimeout(3000);
-
-    const reviews = await page.evaluate(async (apiUrl, apiKey) => {
-
-      async function checkIfReviewExists(ReviewerName) {
-
-        const response = await fetch(
-          `http://${apiUrl}/reviews`,
-          {
-            headers: {
-              Authorization: `Bearer ${apiKey}`,
-              Accept: 'application/json',
-              'Content-Type': 'application/json',
-            },
-          }
-        );
-
-        const reviews = await response.json();
-
-        for (const review of reviews.data) {
-          if (review.attributes.ReviewerName === ReviewerName) {
-            return true;
-          }
-        }
-
-        return false;
-      }
+    const reviews = await page.evaluate(async () => {
 
       const reviewElements = Array.from(document.querySelectorAll('.jftiEf '));
 
-      const filteredReviews = [];
+      const newReviews = [];
       for (const reviewElement of reviewElements) {
         const authorElement = reviewElement.querySelector('.d4r55');
         const ReviewerName = authorElement ? authorElement.textContent : '';
@@ -70,24 +46,43 @@ async function scrapeAndSaveReviews() {
         const commentElement = reviewElement.querySelector('.wiI7pd');
         const ReviewText = commentElement ? commentElement.textContent : '';
 
-        // Проверка и фильтрация отзывов
-        if (!(await checkIfReviewExists(ReviewerName))) {
-          filteredReviews.push({
-            ReviewerName,
-            ReviewText,
-            rating,
-          });
-        }
+        newReviews.push({
+          ReviewerName,
+          ReviewText,
+          rating,
+        })
       }
 
-      return filteredReviews;
-    }, apiUrl, apiKey);
+      return newReviews;
+    });
 
     await browser.close();
 
-    // console.log(reviews)
+    const existingReviews = await axios.get(`http://${apiUrl}/reviews`, {
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    });
 
+    const checkIfReviewExists = (ReviewerName) => {
+      for (const review of existingReviews.data.data) {
+        if (review.attributes.ReviewerName === ReviewerName) {
+          return true;
+        }
+      }
+      return false;
+    };
+
+    const uniqueReviews = [];
     for (const reviewData of reviews) {
+      if (!checkIfReviewExists(reviewData.ReviewerName)) {
+        uniqueReviews.push(reviewData);
+      }
+    }
+
+    for (const reviewData of uniqueReviews) {
       await axios.post(
         `http://${apiUrl}/reviews`,
         {
