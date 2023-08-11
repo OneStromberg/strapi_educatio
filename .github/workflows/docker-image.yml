@@ -32,4 +32,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY_GITACTIONS }}
           script: |
-              bash ~/bootstrap.sh
+              bash ~/bootstrap.sh strapi
