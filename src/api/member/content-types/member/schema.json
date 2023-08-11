@@ -4,24 +4,43 @@
   "info": {
     "singularName": "member",
     "pluralName": "members",
-    "displayName": "Member"
+    "displayName": "Member",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "adress": {
       "type": "string"
     },
-    "EnglishTitle": {
+    "EnglishAdress": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
+    "date": {
+      "type": "string"
     },
-    "EnglishDescription": {
-      "type": "richtext"
+    "place": {
+      "type": "string"
+    },
+    "envent": {
+      "type": "string"
+    },
+    "EnglishPlace": {
+      "type": "string"
+    },
+    "EnglishEvent": {
+      "type": "string"
+    },
+    "EnglishType": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "hit": {
+      "type": "boolean"
     }
   }
 }
