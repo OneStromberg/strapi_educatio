@@ -28,6 +28,12 @@
     },
     "englishText": {
       "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    },
+    "EnglishTitle": {
+      "type": "string"
     }
   }
 }

@@ -30,7 +30,7 @@ async function scrapeAndSaveReviews() {
     });
 
 
-    // await page.waitForTimeout(3000);
+    await page.waitForTimeout(3000);
     const reviews = await page.evaluate(async () => {
 
       const reviewElements = Array.from(document.querySelectorAll('.jftiEf '));
@@ -67,12 +67,16 @@ async function scrapeAndSaveReviews() {
     });
 
     const checkIfReviewExists = (ReviewerName) => {
-      for (const review of existingReviews.data.data) {
-        if (review.attributes.ReviewerName === ReviewerName) {
-          return true;
+      if (existingReviews.data.data) {
+        for (const review of existingReviews.data.data) {
+          if (review.attributes.ReviewerName === ReviewerName) {
+            return true;
+          }
         }
       }
-      return false;
+      else {
+        return false;
+      }
     };
 
     const uniqueReviews = [];

@@ -18,18 +18,9 @@
     "EnglishTitle": {
       "type": "string"
     },
-    "text": {
-      "type": "richtext"
-    },
-    "EnglishText": {
-      "type": "richtext"
-    },
-    "image": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
+    "number": {
+      "type": "string",
+      "default": "+1000"
     }
   }
 }
