@@ -21,22 +21,22 @@
     "date": {
       "type": "string"
     },
-    "place": {
+    "type": {
       "type": "string"
     },
     "event": {
       "type": "string"
     },
-    "EnglishPlace": {
+    "EnglishType": {
       "type": "string"
     },
     "EnglishEvent": {
       "type": "string"
     },
-    "EnglishType": {
+    "EnglishDesc": {
       "type": "string"
     },
-    "type": {
+    "description": {
       "type": "string"
     },
     "hit": {
@@ -51,7 +51,8 @@
       "customField": "plugin::color-picker.color"
     },
     "GoogleFormsLink": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
