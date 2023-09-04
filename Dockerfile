@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:18.17-alpine
 
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev
 ARG NODE_ENV=development
