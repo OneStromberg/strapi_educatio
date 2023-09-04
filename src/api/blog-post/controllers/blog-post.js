@@ -10,8 +10,8 @@ module.exports = createCoreController('api::blog-post.blog-post', ({ strapi }) =
             where: { slug: id },
             populate: ['headingImage']
         });
-        const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
+        // const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
 
-        return this.transformResponse(sanitizedEntity);
+        return entity;
     }
 }));
