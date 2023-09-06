@@ -29,16 +29,16 @@
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "slug": {
-      "type": "uid",
-      "targetField": "EnglishTitle",
-      "required": false
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 5,
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "default": "your-url-text"
     }
   }
 }
