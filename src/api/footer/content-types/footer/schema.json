@@ -12,10 +12,10 @@
   "pluginOptions": {},
   "attributes": {
     "adress": {
-      "type": "string"
+      "type": "richtext"
     },
     "EnglishAdress": {
-      "type": "string"
+      "type": "richtext"
     },
     "email": {
       "type": "email"
