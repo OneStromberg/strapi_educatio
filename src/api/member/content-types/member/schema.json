@@ -40,7 +40,8 @@
       "type": "string"
     },
     "hit": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "EnglishDate": {
       "type": "string"
