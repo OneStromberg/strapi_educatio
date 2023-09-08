@@ -4,7 +4,7 @@
   "info": {
     "singularName": "callback-request",
     "pluralName": "callback-requests",
-    "displayName": "Callback Request",
+    "displayName": "Відповіді на форму",
     "description": ""
   },
   "options": {

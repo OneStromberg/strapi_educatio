@@ -5,7 +5,7 @@
     "singularName": "educational-area",
     "pluralName": "educational-areas",
     "displayName": "Educational Area",
-    "description": ""
+    "description": "Навчальні напрями"
   },
   "options": {
     "draftAndPublish": true
