@@ -4,7 +4,8 @@
   "info": {
     "singularName": "site-preference",
     "pluralName": "site-preferences",
-    "displayName": "Налаштування Сайту"
+    "displayName": "Налаштування Сайту",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,6 +13,10 @@
   "pluginOptions": {},
   "attributes": {
     "isShort": {
+      "type": "boolean",
+      "default": false
+    },
+    "HideCalendar": {
       "type": "boolean",
       "default": false
     }
