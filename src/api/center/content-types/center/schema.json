@@ -18,10 +18,10 @@
       "type": "string"
     },
     "adress": {
-      "type": "string"
+      "type": "richtext"
     },
     "EnglishAdress": {
-      "type": "string"
+      "type": "richtext"
     }
   }
 }
