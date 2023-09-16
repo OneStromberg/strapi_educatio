@@ -1,24 +1,38 @@
 {
-  "kind": "collectionType",
-  "collectionName": "site_preferences",
-  "info": {
-    "singularName": "site-preference",
-    "pluralName": "site-preferences",
-    "displayName": "Налаштування Сайту",
-    "description": ""
-  },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {},
-  "attributes": {
-    "isShort": {
-      "type": "boolean",
-      "default": false
-    },
-    "HideCalendar": {
-      "type": "boolean",
-      "default": false
-    }
-  }
+	"kind": "singleType",
+	"collectionName": "site_preferences",
+	"info": {
+		"singularName": "site-preference",
+		"pluralName": "site-preferences",
+		"displayName": "Налаштування Сайту",
+		"description": ""
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {
+		"i18n": {
+			"localized": true
+		}
+	},
+	"attributes": {
+		"isShort": {
+			"type": "boolean",
+			"default": false,
+			"pluginOptions": {
+				"i18n": {
+					"localized": false
+				}
+			}
+		},
+		"hideCalendar": {
+			"type": "boolean",
+			"default": false,
+			"pluginOptions": {
+				"i18n": {
+					"localized": false
+				}
+			}
+		}
+	}
 }

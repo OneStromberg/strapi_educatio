@@ -1,36 +1,47 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "main_pages",
   "info": {
     "singularName": "main-page",
     "pluralName": "main-pages",
-    "displayName": "Головна сторінка",
-    "description": ""
+    "displayName": "Головна сторінка"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "text": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "subtext": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "richtext"
     },
     "BackgroundImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images"
-      ]
-    },
-    "subtext": {
-      "type": "richtext"
-    },
-    "englishText": {
-      "type": "richtext"
-    },
-    "exnglishSubText": {
-      "type": "richtext"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }

@@ -4,36 +4,44 @@
   "info": {
     "singularName": "about-us",
     "pluralName": "about-uses",
-    "displayName": "Що ми робимо",
-    "description": ""
+    "displayName": "Що ми робимо"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
     "text": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "richtext"
     },
     "image": {
+      "allowedTypes": [
+        "images"
+      ],
       "type": "media",
       "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "englishText": {
-      "type": "richtext"
-    },
-    "title": {
-      "type": "string"
-    },
-    "EnglishTitle": {
-      "type": "string"
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }

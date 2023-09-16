@@ -1,5 +1,5 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "calendars",
   "info": {
     "singularName": "calendar",
@@ -9,9 +9,18 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "CalendarURL": {
+    "calendarURL": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "text"
     }
   }
