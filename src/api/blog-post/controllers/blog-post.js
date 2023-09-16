@@ -6,10 +6,10 @@ module.exports = createCoreController(
 	({ strapi }) => ({
 		async findOne(ctx) {
 			const { slug } = ctx.params
-			const { locale } = ctx.query
+			const { _locale } = ctx.query
 
 			const filters = {
-				where: { slug: slug, locale },
+				where: { slug: slug, _locale },
 				populate: ['headingImage'],
 			}
 
