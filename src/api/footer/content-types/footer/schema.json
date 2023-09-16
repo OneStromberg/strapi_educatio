@@ -21,7 +21,7 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "richtext"
     },
     "oferta_link": {
       "pluginOptions": {
